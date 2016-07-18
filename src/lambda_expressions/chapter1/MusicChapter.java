@@ -12,7 +12,7 @@ import java.util.List;
  * Note:
  * To change this template use File | Settings | File Templates.
  */
-public class MusicChapter {
+public abstract class MusicChapter {
     protected final List<Artist> artists;
     protected final List<Album> albums;
 
