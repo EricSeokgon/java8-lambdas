@@ -31,5 +31,7 @@ public class Chapter1 extends MusicChapter {
     public List<Artist> artistsLivingInLondon() {
         return artists.stream()
                 .filter(artist -> "London".equals(artist.getNationality()))
-
+                .collect(Collectors.toList());
     }
+
+}
