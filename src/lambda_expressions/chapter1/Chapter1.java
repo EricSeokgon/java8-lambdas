@@ -1,4 +1,4 @@
-package lambda_expressions;
+package lambda_expressions.chapter1;
 
 import lambda_expressions.chapter1.Artist;
 import lambda_expressions.chapter1.MusicChapter;
