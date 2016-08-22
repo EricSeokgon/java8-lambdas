@@ -19,4 +19,21 @@ public class StringExamples {
         // END collectors_joining
         return result;
     }
+
+    public static String formatArtistsForLoop(List<Artist> artists) {
+        // BEGIN for_loop
+        StringBuilder builder = new StringBuilder("[");
+        for (Artist  artist : artists) {
+            if (builder.length() > 1)
+                builder.append(", ");
+
+            String name = artist.getName();
+            builder.append(name);
+        }
+        builder.append("]");
+        String result = builder.toString();
+        // END for_loop
+        return result;
+    }
+
 }
