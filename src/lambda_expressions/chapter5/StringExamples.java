@@ -36,4 +36,21 @@ public class StringExamples {
         return result;
     }
 
+    public static String formatArtistsRefactor1(List<Artist> artists) {
+        // BEGIN refactor_1
+        StringBuilder builder = new StringBuilder("[");
+        artists.stream()
+                .map(Artist::getName)
+                .forEach(name -> {
+                    if (builder.length() > 1)
+                        builder.append(", ");
+
+                    builder.append(name);
+                });
+        builder.append("]");
+        String result = builder.toString();
+        // END refactor_1
+        return result;
+    }
+
 }
