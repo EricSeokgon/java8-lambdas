@@ -52,4 +52,24 @@ public class StringExamples {
         // END refactor_1
         return result;
     }
+
+    public static String formatArtistsRefactor2(List<Artist> artists) {
+        // BEGIN refactor_2
+        StringBuilder reduced =
+                artists.stream()
+                        .map(Artist::getName)
+                        .reduce(new StringBuilder(), (builder, name) -> {
+                            if (builder.length() > 0)
+                                builder.append(", ");
+
+                            builder.append(name);
+                            return builder;
+                        }, (left, right) -> left.append(right));
+
+        reduced.insert(0, "[");
+        reduced.append("]");
+        String result = reduced.toString();
+        // END refactor_2
+        return result;
+    }
 }
