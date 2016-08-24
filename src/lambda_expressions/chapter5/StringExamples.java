@@ -52,5 +52,4 @@ public class StringExamples {
         // END refactor_1
         return result;
     }
-
 }
