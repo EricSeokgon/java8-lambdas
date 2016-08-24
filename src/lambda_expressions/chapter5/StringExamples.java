@@ -72,4 +72,18 @@ public class StringExamples {
         // END refactor_2
         return result;
     }
+
+    public static String formatArtistsRefactor3(List<Artist> artists) {
+        // BEGIN refactor_3
+        StringCombiner combined =
+                artists.stream()
+                        .map(Artist::getName)
+                        .reduce(new StringCombiner(", ", "[", "]"),
+                                StringCombiner::add,
+                                StringCombiner::merge);
+
+        String result = combined.toString();
+        // END refactor_3
+        return result;
+    }
 }
