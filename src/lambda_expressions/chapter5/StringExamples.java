@@ -109,4 +109,23 @@ public class StringExamples {
         // END refactor_5
         return result;
     }
+
+    public static String formatArtistsReducing(List<Artist> artists) {
+        // BEGIN reducing
+        String result =
+                artists.stream()
+                        .map(Artist::getName)
+                        .collect(Collectors.reducing(
+                                new StringCombiner(", ", "[", "]"),
+                                name -> new StringCombiner(", ", "[", "]").add(name),
+                                StringCombiner::merge))
+                        .toString();
+        // END reducing
+        return result;
+    }
+
+    /*.reduce(,
+    ,
+    StringCombiner::merge)
+            .toString()*/
 }
