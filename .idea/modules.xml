@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java8-lambdas.iml" filepath="$PROJECT_DIR$/java8-lambdas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../java8Recipes/java8Recipes.iml" filepath="$PROJECT_DIR$/../java8Recipes/java8Recipes.iml" />
     </modules>
   </component>
 </project>
